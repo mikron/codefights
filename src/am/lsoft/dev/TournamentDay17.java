@@ -122,7 +122,7 @@ public class TournamentDay17 {
     }
 
     static String fancyRide(int l, double[] fares) {
-        String[] cars = {"UberX", "UberXL", "UberPlus", "UberSUV", "UberBlack"};
+        String[] cars = {"UberX", "UberXL", "UberPlus", "UberBlack", "UberSUV"};
         String answer = "";
         for (int i = 0; i < 5; i++) {
             if (fares[i] * l <= 20) {
