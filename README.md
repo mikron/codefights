@@ -1,2 +1,2 @@
 # codefights
-My codefights challanges, head to head fights solutions, using java.
+My codefights challanges and head to head fights solutions (java).
