@@ -62,10 +62,74 @@ public class TournamentDay24 {
             return "0";
     }
 
+    static boolean isOneSwapEnough(String inputString) {
+
+        char[][] badPairs = new char[2][];
+        int badPairsCnt = 0;
+        for (int i = 0; i < inputString.length() / 2 ; i++) {
+            char a = inputString.charAt(i);
+            char b = inputString.charAt(inputString.length() - i - 1);
+            if (a != b) {
+                if (badPairsCnt == 2) {
+                    return false;
+                }
+                if (a > b) {
+                    char t = a;
+                    a = b;
+                    b = t;
+                }
+                badPairs[badPairsCnt++] = new char[]{a, b};
+            }
+        }
+        if (badPairsCnt == 0) {
+            return true;
+        } else if (badPairsCnt == 1) {
+            if (inputString.length() % 2 == 0) {
+                return false;
+            }
+            char c = inputString.charAt(inputString.length() / 2);
+            return badPairs[0][0] == c || badPairs[0][1] == c;
+        } else {
+            return badPairs[0][0] == badPairs[1][0] && badPairs[0][1] == badPairs[1][1];
+        }
+    }
+
+    private static int arrayKthGreatest(int[] inputArray, int k) {
+
+        for (int i = 0; i < k; i++) {
+            int indexOfMaximum = i,
+                    tmp = inputArray[i];
+
+            for (int j = i + 1; j < inputArray.length; j++) {
+                if (inputArray[j] > inputArray[indexOfMaximum]) {
+                    indexOfMaximum = j;
+                }
+            }
+
+            inputArray[i] = inputArray[indexOfMaximum];
+            inputArray[indexOfMaximum] = tmp;
+        }
+
+        return inputArray[k - 1];
+    }
+
+    private static int gcm(int a, int b) {
+        return b == 0 ? a : gcm(b, a % b);
+    }
+
+    private static int[] fractionReducing(int[] fraction) {
+        int gcm = gcm(fraction[0], fraction[1]);
+        return new int[] {fraction[0] / gcm, fraction[1] / gcm};
+
+    }
+
     public static void main(String[] args) {
         // System.out.println(extractMatrixColumn(new int[][]{{1, 1, 1, 2}, {0, 5, 0, 4}, {2, 1, 3, 6}}, 2));
         // System.out.println(BalancedTernary(10));
-        System.out.println(BalancedTernary(-293827361));
+        // System.out.println(BalancedTernary(-293827361));
+        // System.out.println(isOneSwapEnough("abab"));
+        // System.out.println(arrayKthGreatest(new int[]{19, 32, 11, 23}, 3));
+        System.out.println(fractionReducing(new int[]{2, 6}));
     }
 
 }
