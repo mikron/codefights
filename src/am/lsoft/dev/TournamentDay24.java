@@ -39,7 +39,7 @@ public class TournamentDay24 {
             return "0";
     }*/
 
-    private static String BalancedTernary(int num) {
+   /* private static String BalancedTernary(int num) {
         int r = 0;
         String t = "";
         if (num < 0)
@@ -60,6 +60,16 @@ public class TournamentDay24 {
             return new StringBuilder(t).reverse().toString();
         } else
             return "0";
+    }
+*/
+
+    private static String BalancedTernary(int n)
+    {
+        String r = "";
+        do
+            r = "1-01-".charAt(2 + n % 3) + r;
+        while ((n = n / 3 + n % 3 / 2) != 0);
+        return r;
     }
 
     static boolean isOneSwapEnough(String inputString) {

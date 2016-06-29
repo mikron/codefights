@@ -1,7 +1,6 @@
 package am.lsoft.dev;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Stack;
 
 /**
@@ -248,7 +247,7 @@ public class TournamentDay17 {
         return minTransForm;
     }*/
 
-    static int arrayEqualization(int[] a, int k) {
+    /*static int arrayEqualization(int[] a, int k) {
         int minTransform = Integer.MAX_VALUE;
         for (int i = 0; i < a.length; i++) {
             int[] tmp = a.clone();
@@ -273,7 +272,26 @@ public class TournamentDay17 {
         }
         return minTransform;
 
+    }*/
+
+    private static int arrayEqualization(int[] a, int k) {
+
+        int maxMoves = Integer.MAX_VALUE;
+
+        for (int i = 1; i <= a.length; i++) {
+            int moves = 0;
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == i) continue;
+
+                j += k - 1;
+                moves++;
+            }
+            maxMoves = Math.min(maxMoves, moves);
+        }
+
+        return maxMoves;
     }
+
 
 
     public static void main(String[] args) {
@@ -288,6 +306,7 @@ public class TournamentDay17 {
         // System.out.println(axisAlignedCirclesBoundingBox(new int[]{1, 0, 4}, new int[]{-1, 2, 2}, new int[]{3, 5, 4}));
         System.out.println(arrayEqualization(new int[]{1, 2, 2, 1, 2, 1, 2, 2, 2, 1, 1, 1}, 2));
         System.out.println(arrayEqualization(new int[]{5, 2, 3, 5, 2, 2, 3, 5, 1, 2, 5, 1, 2, 5, 3}, 7));
+        System.out.println(arrayEqualization(new int[]{1, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1}, 9));
     }
 
 }
