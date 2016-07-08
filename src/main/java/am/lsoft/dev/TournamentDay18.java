@@ -40,7 +40,7 @@ public class TournamentDay18 {
         if (measure > 0 && measure < 90)
             return "acute";
         else if (measure == 90)
-            return "right";
+            return "rightChild";
         else if (measure > 90 && measure < 180)
             return "obtuse";
         else if (measure == 180 || measure == 0)
