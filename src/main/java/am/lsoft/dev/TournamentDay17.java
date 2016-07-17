@@ -1,6 +1,7 @@
 package am.lsoft.dev;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -301,12 +302,12 @@ public class TournamentDay17 {
         // System.out.println(fancyRide(20, new double[]{0.3, 0.5, 0.7, 1, 1.3}));
         // System.out.println(longestDigitsPrefix("123aa1"));
         // System.out.println(regularBracketSequence2("[()()]]"));
-        // System.out.println(maxSumSegments(new int[] {-1, 2, 1, 3, -2}));
+        System.out.println(Arrays.toString(maxSumSegments(new int[] {-1, 2, 1, 3, -2})));
         // System.out.println(oddNumbersBeforeZero(new int[] {1, 2, 3, 0, 4, 5, 6, 0, 1}));
         // System.out.println(axisAlignedCirclesBoundingBox(new int[]{1, 0, 4}, new int[]{-1, 2, 2}, new int[]{3, 5, 4}));
-        System.out.println(arrayEqualization(new int[]{1, 2, 2, 1, 2, 1, 2, 2, 2, 1, 1, 1}, 2));
-        System.out.println(arrayEqualization(new int[]{5, 2, 3, 5, 2, 2, 3, 5, 1, 2, 5, 1, 2, 5, 3}, 7));
-        System.out.println(arrayEqualization(new int[]{1, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1}, 9));
+        // System.out.println(arrayEqualization(new int[]{1, 2, 2, 1, 2, 1, 2, 2, 2, 1, 1, 1}, 2));
+        // System.out.println(arrayEqualization(new int[]{5, 2, 3, 5, 2, 2, 3, 5, 1, 2, 5, 1, 2, 5, 3}, 7));
+        // System.out.println(arrayEqualization(new int[]{1, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1}, 9));
     }
 
 }

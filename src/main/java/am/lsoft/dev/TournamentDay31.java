@@ -48,7 +48,7 @@ public class TournamentDay31 {
     }
 
     // http://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/
-    private static int minDistance(int dist[], Boolean sptSet[]) {
+    public static int minDistance(int dist[], Boolean sptSet[]) {
         // Initialize min value
         int min = Integer.MAX_VALUE, min_index = -1;
 

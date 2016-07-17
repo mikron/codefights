@@ -419,12 +419,12 @@ public class TournamentDay8 {
         // System.out.println(isSumOfConsecutive(8));
         // System.out.println(isPowerOfTwo(16));
         // System.out.println(almostIncreasingSequence(new int[] {1, 3, 2}));
-        // System.out.println(properOrImproper(new int[] {7, 2}));
+        System.out.println(properOrImproper(new int[] {7, 2}));
         // System.out.println(cyclicString("cabca"));
         // System.out.println(spiralNumbers(3));
         // System.out.println(isLucky(1230));
         // System.out.println(squaresSumMinimization(new int[]{2, 4, 7}));
-        System.out.println(holiday(3, "Wednesday", "November", 2016));
+        // System.out.println(holiday(3, "Wednesday", "November", 2016));
         // System.out.println(maxGCD(new int[]{8, 60, 12, 3}));
         // System.out.println(minimalNumberOfCoins(new int[]{1, 2, 10}, 28));
         // System.out.println(countTriangles(new int[]{0, 0, 1, 1}, new int[]{0, 1, 1, 0}));
