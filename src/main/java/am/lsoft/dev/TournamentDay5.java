@@ -181,12 +181,15 @@ public class TournamentDay5 {
 
         for (int i = 0; i < inputString.length(); i++) {
             if (i % 3 == 2) {
-                if (inputString.charAt(i) != '-' || (inputString.charAt(i) == '-' && i == inputString.length() - 1)) {
+                if (inputString.charAt(i) != '-' || (inputString.charAt(i) == '-'
+                        && i == inputString.length() - 1)) {
                     return false;
                 }
             } else {
                 char sym = inputString.charAt(i);
-                if (!('0' <= sym && sym <= '9' || 'A' <= sym && sym <= 'F' || sym == '-')) {
+                if (!('0' <= sym && sym <= '9' ||
+                        'A' <= sym && sym <= 'F' ||
+                        sym == '-')) {
                     return false;
                 }
             }

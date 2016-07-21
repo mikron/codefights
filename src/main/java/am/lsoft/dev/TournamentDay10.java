@@ -38,9 +38,9 @@ public class TournamentDay10 {
     }
 
     static boolean checkSameElementExistence(int[] arr1, int[] arr2) {
-        for (int i = 0; i < arr1.length; i++) {
-            for (int j = 0; j < arr2.length; j++) {
-                if (arr1[i] == arr2[j])
+        for (int anArr1 : arr1) {
+            for (int anArr2 : arr2) {
+                if (anArr1 == anArr2)
                     return true;
             }
         }
