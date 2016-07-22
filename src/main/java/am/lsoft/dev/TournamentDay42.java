@@ -117,7 +117,11 @@ public class TournamentDay42 {
                 was[s.charAt(left) - 'a'] = false;
                 left++;
             }
-            /// ...
+            if (!was[c]) {
+                was[c] = true;
+            }
+            if (right - left > best)
+                best = right - left;
         }
 
         return best;
@@ -252,7 +256,7 @@ public class TournamentDay42 {
             if (k < 0) {
                 k += 26;
             }
-            for (int j = i + 1; j < inputString.length(); j++) {
+            for (int j = 0; j < inputString.length(); j++) {
                 if ((inputString.charAt(j) - 'a' + k) % 26 !=
                         encodedString.charAt(j) - 'a') {
                     mistakes++;
@@ -304,12 +308,13 @@ public class TournamentDay42 {
         // System.out.println(Arrays.toString(repeatedSubstring("abacabadabacaba", 6)));
         // System.out.println(Arrays.toString(repeatedSubstring2("abacabadabacaba", 6)));
         // System.out.println(countSumOfTwoRepresentations3(6, 2, 4));
-        // System.out.println(uniqueChars("abcabba"));
+        System.out.println(uniqueChars("abcabba"));
+        System.out.println(uniqueChars("abcdecfg"));
         // System.out.println(lookAndSaySequenceNextElement("1"));
         // System.out.println(differentDigitsNumberSearch(new int[]{22, 111, 101, 124, 33, 30}));
         // System.out.println(pagesNumbering(11));
         // System.out.println(alphabeticShiftEncoding("xyza", "abdd"));
-        System.out.println(firstDigit("var_1__Int"));
+        // System.out.println(firstDigit("var_1__Int"));
     }
 
 }
