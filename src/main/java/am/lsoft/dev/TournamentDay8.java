@@ -56,7 +56,7 @@ public class TournamentDay8 {
     }
 
     static String properOrImproper(int[] A) {
-        if (Math.abs((double) A[1] / A[0]) < 1) {
+        if (Math.abs((double) A[0] / A[1]) < 1) {
             return "Proper";
         }
         return "Improper";
