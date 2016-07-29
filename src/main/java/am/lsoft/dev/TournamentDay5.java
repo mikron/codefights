@@ -203,6 +203,7 @@ public class TournamentDay5 {
         int len = Math.abs(b - a);
         t %= (2 * len);
         if (t <= len) {
+            // return a + (b - a) / Math.abs(b - a) * t;
             return Math.min(a, b) + t;
         } else {
             t -= len;
