@@ -196,7 +196,7 @@ public class TournamentDay38 {
                     cur = -1;
                 }
             }
-            best = ans;
+            best = Math.min(best, ans);
         }
 
         return best;
