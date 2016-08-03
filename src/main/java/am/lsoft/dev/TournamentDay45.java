@@ -341,7 +341,7 @@ public class TournamentDay45 {
         Arrays.sort(B);
 
         for (int pos_a = 0; pos_a < A.length; pos_a++) {
-            while (pos_a > pos_b/*...*/) {
+            while (pos_b < B.length && B[pos_b] < A[pos_a]) {
                 C.add(B[pos_b]);
                 pos_b++;
             }

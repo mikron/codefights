@@ -147,7 +147,7 @@ public class TournamentDay46 {
         for (int i = 0; i < a.length; i += 2) {
             team1 += a[i];
         }
-        for (int i = 2; i < a.length; i += 2) {
+        for (int i = 1; i < a.length; i += 2) {
             team2 += a[i];
         }
         int[] result = {team1, team2};
