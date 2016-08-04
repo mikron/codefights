@@ -336,8 +336,8 @@ public class TournamentDay5 {
         // System.out.println(replaceFirstDigitRegExp("There are 12 points"));
         // System.out.println(maxSumSegments(new int[]{-1, 2, 1, 3, -2}));
         // System.out.println(regularBracketSequence1("(())()()()"));
-        // System.out.println(checkSameElementExistence(new int[]{1000, 2000, 3000, 4000, 5000},
-        //                new int[]{5000, 6000, 7000, 8000}));
+        System.out.println(checkSameElementExistence(new int[]{1000, 2000, 3000, 4000, 5000},
+                        new int[]{5000, 6000, 7000, 8000}));
         //System.out.println(chessBoardSquaresUnderQueenAttack(3, 2));
         //System.out.println(imagesOverlapping(new boolean[][]{{false, true, false}, {true, false, true}}, new boolean[][]{{true, false}}));
         //System.out.println(isMAC48Address("02-03-04-05-06-07-"));
@@ -345,7 +345,7 @@ public class TournamentDay5 {
         //System.out.println(maxGCD(new int[]{5, 3, 9}));
         // System.out.println(kthDivisor(16, 5));
         // System.out.println(alphabeticShiftEncoding("xyza", "abdd"));
-        System.out.println(alphabeticShiftEncoding2("xyza", "abdd"));
+        // System.out.println(alphabeticShiftEncoding2("xyza", "abdd"));
     }
 
 }
