@@ -439,6 +439,52 @@ public class TournamentDay48 {
         return result;
     }
 
+    private static int[] improperFractionToMixed(int[] A) {
+
+        int[] B = {A[0] / A[1], 0, 0};
+        B[1] = A[0] - A[1] * B[0];
+        B[2] = A[1];
+
+        return B;
+    }
+
+    private static char lastDigitRegExp(String inputString) {
+
+        for (int i = inputString.length() - 1; i >= 0; i--) {
+            if ('0' <= inputString.charAt(i) && inputString.charAt(i) <= '9')
+                return inputString.charAt(i);
+        }
+
+        return ' ';
+
+    }
+
+    private static int differentDigitsNumberSearch(int[] inputArray) {
+
+        for (int i = 0; i < inputArray.length; i++) {
+            int cur = inputArray[i];
+            boolean[] was = new boolean[10];
+            boolean ok = true;
+            while (cur > 0) {
+                if (was[cur % 10]) {
+                    ok = false;
+                    break;
+                }
+                was[cur % 10] = true;
+                cur /= 10;
+            }
+            if (ok) {
+                return inputArray[i];
+            }
+        }
+
+        return -1;
+    }
+
+    private static boolean pointInLine(int[] point, int[] line) {
+        return line[0] * point[0] + line[1] * point[1] + line[2] == 0;
+    }
+
     public static void main(String[] args) {
         // System.out.println(mergeKArrays(new int[][]{{1, 3, 5}, {2, 3}, {2, 3, 5, 8}}));
         // System.out.println(threeGlasses(new int[]{16, 5, 3}));

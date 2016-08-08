@@ -405,7 +405,6 @@ public class TournamentDay47 {
         return Math.max(mx[0] - mn[0], mx[1] - mn[1]);
     }
 
-    // TODO BUGFIX
     private static String smallestPalindrome(String s0) {
 
         char[] s = s0.toCharArray();
@@ -420,7 +419,7 @@ public class TournamentDay47 {
 
         if (s[i] < s[s.length - i - 1]) {
             while (i < s.length) {
-                s[s.length - i] = s[i];
+                s[i] = s[s.length - i - 1];
                 i++;
             }
             return String.valueOf(s);
