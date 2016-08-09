@@ -214,7 +214,8 @@ public class TournamentDay52 {
             if (!inCycle[i]) {
                 int position = i;
                 while (!inCycle[position]) {
-                    // ...
+                    inCycle[position] = true;
+                    position = permutation[position] - 1;
                 }
                 result++;
             }
